@@ -1,44 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-</head>
-<body>
-    <main>
-        <div class="calculator-screen flex-row">
-            <h1>number</h1>
-        </div>
-        <div class="flex-row">
-            <button class="aritmethic-button">AC</button>
-            <button class="aritmethic-button">f(x)</button>
-            <button class="aritmethic-button">%</button>
-            <button class="aritmethic-button">+</button>
-        </div>
-        <div class="flex-row">
-            <button class="number-button">7</button>
-            <button class="number-button">8</button>
-            <button class="number-button">9</button>
-            <button class="aritmethic-button">-</button>
-        </div>
-        <div class="flex-row">
-            <button class="number-button">4</button>
-            <button class="number-button">5</button>
-            <button class="number-button">6</button>
-            <button class="aritmethic-button">x</button>
-        </div>
-        <div class="flex-row">
-            <button class="number-button">1</button>
-            <button class="number-button">2</button>
-            <button class="number-button">3</button>
-            <button class="aritmethic-button">/</button>
-        </div>
-        <div class="flex-row">
-            <button class="number-button">0</button>
-            <button class="number-button">.</button>
-            <button class="aritmethic-button">=</button>
-        </div>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./javascripts/app.js"></script>
+  </head>
+  <body class="flex-column">
+
+    <main class="calculator flex-column">
+      <div class="calculator-screen flex-row">
+        <h1>number</h1>
+      </div>
+      <div class="flex-row">
+        <button class="aritmethic-button">AC</button>
+        <button class="aritmethic-button">f(x)</button>
+        <button class="aritmethic-button">%</button>
+        <button class="aritmethic-button">+</button>
+      </div>
+      <div class="flex-row">
+        <button class="number-button">7</button>
+        <button class="number-button">8</button>
+        <button class="number-button">9</button>
+        <button class="aritmethic-button">-</button>
+      </div>
+      <div class="flex-row">
+        <button class="number-button">4</button>
+        <button class="number-button">5</button>
+        <button class="number-button">6</button>
+        <button class="aritmethic-button">x</button>
+      </div>
+      <div class="flex-row">
+        <button class="number-button">1</button>
+        <button class="number-button">2</button>
+        <button class="number-button">3</button>
+        <button class="aritmethic-button">/</button>
+      </div>
+      <div class="flex-row">
+        <button class="number-button">0</button>
+        <button class="number-button">.</button>
+        <button class="aritmethic-button">=</button>
+      </div>
     </main>
-</body>
+  </body>
+  <script type="text/javascript">
+    function loadJS() {
+      var element = document.createElement("script");
+      element.src = "./javascripts/app.js";
+      document.body.appendChild(element);
+    }
+    if (window.addEventListener) window.addEventListener("load", loadJS, false);
+    else if (window.attachEvent) window.attachEvent("onload", loadJS);
+    else window.onload = loadJS;
+  </script>
 </html>

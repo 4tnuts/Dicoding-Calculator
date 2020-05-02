@@ -22,6 +22,7 @@ body {
   height: 100%;
   background-color: var(--bg);
   justify-content: center;
+  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
 /*THEMES*/

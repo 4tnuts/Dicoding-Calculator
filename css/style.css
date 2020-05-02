@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -26,25 +26,74 @@ body {
 /* CAlCULATOR */
 .calculator {
   margin: auto;
-  width: 28%;
+  width: 23%;
   height: 80vh;
   border-radius: 42px;
   background: var(--white-bg);
   border-radius: 42px;
   box-shadow: 9px 9px 15px #0000001e, -9px -9px 15px #ffffff;
   align-items: center;
-  padding: 20px;
+  padding-top: 25px;
+  justify-content: space-between;
 }
 
 .calculator-screen {
-  width: 80%;
+  flex-basis: 15%;
+  width: 85%;
   justify-content: flex-end;
   border-radius: 20px;
   background: #f1f3f6;
   box-shadow: inset 8px 8px 16px #cdcfd1, inset -8px -8px 16px #ffffff;
   font-size: 2rem;
   font-weight: 400;
-  color:#4E4E4E;
+  color: #4e4e4e;
   padding-right: 20px;
-  font-family: 'Monda', sans-serif;
+  font-family: "Monda", sans-serif;
+}
+
+.calculator-buttons {
+  width: 85%;
+  height: 80%;
+  justify-content: space-evenly;
+}
+
+.calculator-buttons .flex-row {
+  flex-basis: 15%;
+  justify-content: space-evenly;
+}
+
+.button {
+  flex-basis: 20%;
+  font-size: 1.5em;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.number {
+  background: var(--white-bg);
+  box-shadow: 6px 6px 12px #d9dbdd, -6px -6px 12px #ffffff;
+}
+
+.number:active {
+  background: linear-gradient(145deg, #d9dbdd, #ffffff);
+  box-shadow: 6px 6px 12px #d9dbdd, -6px -6px 12px #ffffff;
+}
+
+.aritmethic {
+  background: #e0e0fc;
+  box-shadow: 5px 5px 10px #cecee8, -5px -5px 10px #f2f2ff;
+}
+
+.aritmethic:active {
+  background: linear-gradient(145deg, #cacae3, #f0f0ff);
+  box-shadow: 6px 6px 12px #cacae3, -6px -6px 12px #f6f6ff;
+}
+
+.zero {
+  flex-basis: 45%;
 }

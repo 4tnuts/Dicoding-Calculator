@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./javascripts/app.js"></script>
+    <script defer src="./javascripts/app.js"></script>
   </head>
-  <body class="flex-column">
-
+  <body class="flex-column dark">
     <main class="calculator flex-column">
       <div class="calculator-screen flex-row">
         <p>1234567890</p>
@@ -16,7 +15,7 @@
       <div class="calculator-buttons flex-column">
         <div class="buttons flex-row">
           <button class="aritmethic button">AC</button>
-          <button class="aritmethic button">f(x)</button>
+          <button class="aritmethic button"><i>f</i>(x)</button>
           <button class="aritmethic button">%</button>
           <button class="aritmethic button">+</button>
         </div>
@@ -46,14 +45,4 @@
       </div>
     </main>
   </body>
-  <script type="text/javascript">
-    function loadJS() {
-      var element = document.createElement("script");
-      element.src = "./javascripts/app.js";
-      document.body.appendChild(element);
-    }
-    if (window.addEventListener) window.addEventListener("load", loadJS, false);
-    else if (window.attachEvent) window.attachEvent("onload", loadJS);
-    else window.onload = loadJS;
-  </script>
 </html>

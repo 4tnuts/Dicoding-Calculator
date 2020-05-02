@@ -1,8 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap");
 
+:root {
+  /* Light Theme */
+  --white: #f1f3f6;
+  --purple: #e0e0fc;
+
+  /* Dark Theme */
+  --black: #37393b;
+  --red: #943d3d;
+}
+
 * {
   box-sizing: border-box;
-  --white-bg: #f1f3f6;
+  color: var(--text);
 }
 
 html,
@@ -10,7 +20,36 @@ body {
   padding: 0;
   margin: 0;
   height: 100%;
-  background-color: var(--white-bg);
+  background-color: var(--bg);
+}
+
+/*THEMES*/
+.light {
+  --bg: var(--white);
+  --text: var(--black);
+  --shadow: 9px 9px 15px #0000001e, -9px -9px 15px #ffffff;
+  --arit-button: var(--purple);
+  --screen-shadow: inset 8px 8px 16px #cdcfd1, inset -8px -8px 16px #ffffff;
+  --button-shadow: 6px 6px 12px #d9dbdd, -6px -6px 12px #ffffff8a;
+  --active-button: linear-gradient(145deg, #d9dbdd, #ffffff);
+  --hover-button: linear-gradient(145deg, #ffffff, #d9dbdd);
+  --aritmethic-shadow: 6px 6px 12px #cecee8, -6px -6px 12px #f2f2ff;
+  --aritmethic-hover: linear-gradient(145deg, #f0f0ff, #cacae3);
+  --aritmethic-active: linear-gradient(145deg, #cacae3, #f0f0ff);
+}
+
+.dark {
+  --bg: var(--black);
+  --text: var(--white);
+  --shadow: 5px 5px 10px #252628, -5px -5px 10px #494c4e;
+  --arit-button: var(--red);
+  --screen-shadow: inset 5px 5px 10px #252628, inset -5px -5px 10px #494c4e;
+  --button-shadow: 5px 5px 10px #252628, -5px -5px 10px #494c4e;
+  --active-button: linear-gradient(145deg, #323335, #3b3d3f);
+  --hover-button: linear-gradient(145deg, #3b3d3f, #323335);
+  --aritmethic-shadow: 5px 5px 10px #252628, -5px -5px 10px #494c4e;
+  --aritmethic-hover: linear-gradient(145deg, #9e4141, #853737);
+  --aritmethic-active: linear-gradient(145deg, #853737, #9e4141);
 }
 
 /* FLEX TEMPLATE */
@@ -29,9 +68,9 @@ body {
   width: 23vw;
   height: 80vh;
   border-radius: 42px;
-  background: var(--white-bg);
+  background: var(--bg);
   border-radius: 42px;
-  box-shadow: 9px 9px 15px #0000001e, -9px -9px 15px #ffffff;
+  box-shadow: var(--shadow);
   align-items: center;
   padding-top: 25px;
   justify-content: space-between;
@@ -42,11 +81,10 @@ body {
   width: 85%;
   justify-content: flex-end;
   border-radius: 20px;
-  background: #f1f3f6;
-  box-shadow: inset 8px 8px 16px #cdcfd1, inset -8px -8px 16px #ffffff;
+  background: var(--bg);
+  box-shadow: var(--screen-shadow);
   font-size: 2rem;
   font-weight: 400;
-  color: #4e4e4e;
   padding-right: 20px;
   font-family: "Monda", sans-serif;
 }
@@ -75,33 +113,29 @@ body {
 }
 
 .number {
-  background: var(--white-bg);
-  box-shadow: 6px 6px 12px #d9dbdd, -6px -6px 12px #ffffff;
+  background: var(--bg);
+  box-shadow: var(--button-shadow);
 }
 
 .number:hover {
-  background: linear-gradient(145deg, #ffffff, #d9dbdd);
-  box-shadow: 6px 6px 12px #d9dbdd, -6px -6px 12px #ffffff;
+  background: var(--hover-button);
 }
 
 .number:active {
-  background: linear-gradient(145deg, #d9dbdd, #ffffff);
-  box-shadow: 6px 6px 12px #d9dbdd, -6px -6px 12px #ffffff;
+  background: var(--active-button);
 }
 
 .aritmethic {
-  background: #e0e0fc;
-  box-shadow: 5px 5px 10px #cecee8, -5px -5px 10px #f2f2ff;
+  background: var(--arit-button);
+  box-shadow: var(--aritmethic-shadow);
 }
 
 .aritmethic:hover {
-  background: linear-gradient(145deg, #f0f0ff, #cacae3);
-  box-shadow: 6px 6px 12px #cacae3, -6px -6px 12px #f6f6ff;
+  background: var(--aritmethic-hover);
 }
 
 .aritmethic:active {
-  background: linear-gradient(145deg, #cacae3, #f0f0ff);
-  box-shadow: 6px 6px 12px #cacae3, -6px -6px 12px #f6f6ff;
+  background: var(--aritmethic-active);
 }
 
 .zero {
@@ -109,7 +143,7 @@ body {
 }
 
 @media screen and (max-width: 513px) {
-  .calculator{
+  .calculator {
     width: 80%;
   }
 }

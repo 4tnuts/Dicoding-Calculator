@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Monda:wght@400;700&display=swap");
 
 :root {
   /* Light Theme */
@@ -21,6 +21,7 @@ body {
   margin: 0;
   height: 100%;
   background-color: var(--bg);
+  justify-content: center;
 }
 
 /*THEMES*/
@@ -140,6 +141,29 @@ body {
 
 .zero {
   flex-basis: 45%;
+}
+
+.change-theme{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  height: 5vh;
+  padding: 10px;
+  margin: auto;
+  border: none;
+  box-shadow: var(--button-shadow);
+  background: var(--bg);
+}
+
+.change-theme:hover{
+  background: var(--hover-button);
+}
+
+.change-theme:active{
+  background: var(--active-button);
+}
+
+.change-theme:focus{
+  outline: none;
 }
 
 @media screen and (max-width: 513px) {

@@ -1,45 +1,36 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Monda:wght@400;700&display=swap");
-
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Monda:wght@400;700&display=swap";
 :root {
-  /* Light Theme */
   --white: #f1f3f6;
   --purple: #e0e0fc;
-
-  /* Dark Theme */
   --black: #37393b;
   --red: #943d3d;
 }
-
 * {
   box-sizing: border-box;
   color: var(--text);
 }
-
-html,
-body {
+body,
+html {
   padding: 0;
   margin: 0;
   height: 100%;
   background-color: var(--bg);
   justify-content: center;
-  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+  transition: background 0.5s ease-in-out, color 1s ease-in-out;
 }
-
-/*THEMES*/
 .light {
   --bg: var(--white);
   --text: var(--black);
-  --shadow: 9px 9px 15px #0000001e, -9px -9px 15px #ffffff;
+  --shadow: 9px 9px 15px #0000001e, -9px -9px 15px #fff;
   --arit-button: var(--purple);
-  --screen-shadow: inset 8px 8px 16px #cdcfd1, inset -8px -8px 16px #ffffff;
+  --screen-shadow: inset 8px 8px 16px #cdcfd1, inset -8px -8px 16px #fff;
   --button-shadow: 6px 6px 12px #d9dbdd, -6px -6px 12px #ffffff8a;
-  --active-button: linear-gradient(145deg, #d9dbdd, #ffffff);
-  --hover-button: linear-gradient(145deg, #ffffff, #d9dbdd);
+  --active-button: linear-gradient(145deg, #d9dbdd, #fff);
+  --hover-button: linear-gradient(145deg, #fff, #d9dbdd);
   --aritmethic-shadow: 6px 6px 12px #cecee8, -6px -6px 12px #f2f2ff;
   --aritmethic-hover: linear-gradient(145deg, #f0f0ff, #cacae3);
   --aritmethic-active: linear-gradient(145deg, #cacae3, #f0f0ff);
 }
-
 .dark {
   --bg: var(--black);
   --text: var(--white);
@@ -53,18 +44,13 @@ body {
   --aritmethic-hover: linear-gradient(145deg, #9e4141, #853737);
   --aritmethic-active: linear-gradient(145deg, #853737, #9e4141);
 }
-
-/* FLEX TEMPLATE */
 .flex-column {
   display: flex;
   flex-direction: column;
 }
-
 .flex-row {
   display: flex;
 }
-
-/* CAlCULATOR */
 .calculator {
   margin: auto;
   width: 23vw;
@@ -77,7 +63,6 @@ body {
   padding-top: 25px;
   justify-content: space-between;
 }
-
 .calculator-screen {
   flex-basis: 15%;
   width: 85%;
@@ -88,20 +73,17 @@ body {
   font-size: 2rem;
   font-weight: 400;
   padding-right: 20px;
-  font-family: "Monda", sans-serif;
+  font-family: Monda, sans-serif;
 }
-
 .calculator-buttons {
   width: 85%;
   height: 80%;
   justify-content: space-evenly;
 }
-
 .calculator-buttons .flex-row {
   flex-basis: 15%;
   justify-content: space-evenly;
 }
-
 .button {
   flex-basis: 20%;
   font-size: 1.5em;
@@ -109,43 +91,37 @@ body {
   cursor: pointer;
   border: none;
 }
-
 .button:focus {
-  outline: none;
+  outline: 0;
 }
-
-.number {
+.number,
+.coma {
   background: var(--bg);
   box-shadow: var(--button-shadow);
 }
-
-.number:hover {
+.number:hover,
+.coma:hover {
   background: var(--hover-button);
 }
-
-.number:active {
+.number:active,
+.coma:active {
   background: var(--active-button);
 }
-
 .aritmethic {
   background: var(--arit-button);
   box-shadow: var(--aritmethic-shadow);
 }
-
 .aritmethic:hover {
   background: var(--aritmethic-hover);
 }
-
 .aritmethic:active {
   background: var(--aritmethic-active);
 }
-
 .zero {
   flex-basis: 45%;
 }
-
-.change-theme{
-  font-family: 'Montserrat', sans-serif;
+.change-theme {
+  font-family: Montserrat, sans-serif;
   font-weight: bolder;
   height: 5vh;
   padding: 10px;
@@ -154,19 +130,15 @@ body {
   box-shadow: var(--button-shadow);
   background: var(--bg);
 }
-
-.change-theme:hover{
+.change-theme:hover {
   background: var(--hover-button);
 }
-
-.change-theme:active{
+.change-theme:active {
   background: var(--active-button);
 }
-
-.change-theme:focus{
-  outline: none;
+.change-theme:focus {
+  outline: 0;
 }
-
 @media screen and (max-width: 513px) {
   .calculator {
     width: 80%;

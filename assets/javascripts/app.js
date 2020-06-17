@@ -5,26 +5,37 @@ const aritmethicButtons = document.querySelectorAll(".aritmethic");
 const bodyElement = document.body;
 let aritClicked = 0;
 
+const calculate = () => {
+  const operators = [];
+};
+
 aritmethicButtons.forEach((el, key) => {
   el.onclick = () => {
     if (el.textContent === "AC") {
       return (screenCalc[0].textContent = "");
     }
-    
+
     if (aritClicked == 0 && screenCalc[0].textContent != "") {
-        if(el.textContent === '+' || '-' || '/' || 'x'){
-            aritClicked = 1;
-            return screenCalc[0].textContent += el.textContent;
-        }
+      if (el.textContent === "=") {
+        aritClicked = 0;
+        return calculate();
+      } else if (el.textContent === "+" || "-" || "/" || "x") {
+        aritClicked = 1;
+        return (screenCalc[0].textContent += el.textContent);
+      }
     }
-    return console.log('cant clikced twice');
+    return console.log("cant clikced twice");
   };
 });
 
 numberButtons.forEach((el, key) => {
   el.onclick = () => {
     aritClicked = 0;
-    screenCalc[0].textContent += el.textContent;
+    if (screenCalc[0].textContent === "0") {
+      screenCalc[0].textContent = el.textContent;
+    } else {
+      screenCalc[0].textContent += el.textContent;
+    }
   };
 });
 

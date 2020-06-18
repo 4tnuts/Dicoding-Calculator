@@ -6,7 +6,8 @@ const bodyElement = document.body;
 let aritClicked = 0;
 
 const calculate = () => {
-  const operators = [];
+  let numbers = screenCalc[0].textContent.split(/[+x/-]+/g);
+  let operators = screenCalc[0].textContent.split(/[0-9]+/g).filter(Boolean);
 };
 
 aritmethicButtons.forEach((el, key) => {
@@ -21,7 +22,7 @@ aritmethicButtons.forEach((el, key) => {
         return calculate();
       } else if (el.textContent === "+" || "-" || "/" || "x") {
         aritClicked = 1;
-        return (screenCalc[0].textContent += el.textContent);
+        return (screenCalc[0].textContent += `${el.textContent}`);
       }
     }
     return console.log("cant clikced twice");
